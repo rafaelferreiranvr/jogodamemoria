@@ -82,17 +82,17 @@ function criarCartas(dificuldade) {
         carta.className = "carta";
         carta.id = `c${i+1}i${icones[i]}`;
         document.getElementById("cartas").appendChild(carta);
-        $(`#c${i+1}i${icones[i]}`).attr("onclick", `virarCarta(${i+1}, ${icones[i]}, false)`);
-        $(`#c${i+1}i${icones[i]}`).attr("escolhida", "false");
+        $(`#c${i+1}i${icones[i]}`).attr({
+            "onclick": `virarCarta(${i+1}, ${icones[i]}, false)`,
+            "escolhida": "false",});
         $(`#c${i+1}i${icones[i]}`).css("opacity", "0");
     }
 
     function predefinicao() {
-        $(".carta").css({
+        $(".carta, #conteinerCartas").css({
             "display": "inline-block",
         })
         $("#conteinerCartas").css({
-            "display": "inline-block",
             "width": "100%",
             "height": "calc(100vh - 90px)"
         })
@@ -147,8 +147,9 @@ function virarCarta(nCarta, nIcone, virado) {
             "background-image": `url(icones/i${nIcone}.png)`,
             "background-size": "50%",
             "transition": "transform 0.5s, opacity 1s"})
-        $(`#c${nCarta}i${nIcone}`).attr("onclick", `virarCarta(${nCarta}, ${nIcone}, true)`);
-        $(`#c${nCarta}i${nIcone}`).attr("escolhida", "true")
+        $(`#c${nCarta}i${nIcone}`).attr({
+            "onclick": `virarCarta(${nCarta}, ${nIcone}, true)`,
+            "escolhida": "true"});
     }
 
     function giro(graus) {
@@ -247,9 +248,8 @@ function comparacao(nCarta1, nIcone1, nCarta2, nIcone2) {
 
 function vitoria() {
     $("body").css("background-color", "rgb(39,44,53)")
-    $("#cartas").css("display", "none");
+    $("#cartas, #restart").css("display", "none");
     $(".carta").remove();
-    $("#restart").css("display", "none")
     $("#vitoria").css("display", "inline-block")
     $("#conteudo").css({
         "display": "inline-block",
@@ -270,9 +270,7 @@ function restart() {
     $("#vitoria").css("opacity", "0");
     $("#restart").css("opacity", "0");
     setTimeout(function() {
-        $("#cartas").css("display", "none");
-        $("#restart").css("display", "none");
-        $("#vitoria").css("display", "none");
+        $("#cartas, #restart, #vitoria").css("display", "none");
         $("#setup").css("display", "inline-block");
         $("#setup").css("opacity", "1");
         document.getElementById("comecar").disabled = false;
