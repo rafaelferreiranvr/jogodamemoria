@@ -16,7 +16,7 @@ body {
     padding: 20px;
     padding-bottom: 0;
     padding-top: 0;
-    font-family: monospace;
+    font-family: "consolas-bold";
     font-size: 18px;
     color: rgb(201, 201, 201);
     text-align: center;
@@ -29,23 +29,27 @@ body {
     height: 260px;
 }
 
+@font-face {
+    font-family: "consolas-bold";
+    src: url(fonts/consolas-bold.ttf)
+}
 
 /* Janela de configuração */
 
 #setup { 
     display: inherit;
     transition: 0.5s;
-    font-family: monospace;
+    font-family: "consolas-bold";
 }
 
 #setup h1 {
     font-size: 32px;
     padding-bottom: 15px;
-    font-family: monospace;
+    font-family: "consolas-bold";
 }
 
 h1, h2 {
-    font-family: monospace;
+    font-family: "consolas-bold";
 }
 
 .botao {
@@ -54,7 +58,7 @@ h1, h2 {
     margin-bottom: 5%;
     width: 100px;
     height: 50px;
-    font-family: monospace;
+    font-family: "consolas-bold";
     font-size: 20px;
     border: 0;
     outline: 0;
@@ -65,7 +69,7 @@ h1, h2 {
 
 #setup select {
     margin-bottom: 10%;
-    font-family: monospace;
+    font-family: "consolas-bold";
     background-color: transparent;
     color:  rgb(201, 201, 201);
     border: 0;
@@ -75,11 +79,11 @@ h1, h2 {
 
 #setup option {
     background-color: rgb(44, 49, 54);
-    font-family: monospace;
+    font-family: "consolas-bold";
 }
 
 #vitoria {
-    font-family: monospace;
+    font-family: "consolas-bold";
     display: none;
     transition: 0.25s;
     opacity: 0;
