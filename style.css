@@ -41,8 +41,12 @@ body {
 #setup h1 {
     font-size: 32px;
     padding-bottom: 15px;
+    font-family: monospace;
 }
 
+h1, h2 {
+    font-family: monospace;
+}
 
 .botao {
     display: block;
@@ -71,6 +75,7 @@ body {
 
 #setup option {
     background-color: rgb(44, 49, 54);
+    font-family: monospace;
 }
 
 #vitoria {
