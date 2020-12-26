@@ -1,0 +1,143 @@
+/* Geral */ 
+body {
+    background-color: rgb(39,44,53);
+    text-align: center;
+    vertical-align: center;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+
+#conteudo {
+    background-color: rgb(46, 51, 61);
+    display: inline-block;
+    padding: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+    font-family: monospace;
+    font-size: 18px;
+    color: rgb(201, 201, 201);
+    text-align: center;
+    transition: 0.5s;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 260px;
+}
+
+
+/* Janela de configuração */
+
+#setup { 
+    display: inherit;
+    transition: 0.5s;
+}
+
+#setup h1 {
+    font-size: 32px;
+    padding-bottom: 15px;
+}
+
+
+.botao {
+    display: block;
+    margin: auto;
+    margin-bottom: 5%;
+    width: 100px;
+    height: 50px;
+    font-family: monospace;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    color:  rgb(201, 201, 201);
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#setup select {
+    margin-bottom: 10%;
+    font-family: monospace;
+    background-color: transparent;
+    color:  rgb(201, 201, 201);
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+}
+
+#setup option {
+    background-color: rgb(44, 49, 54);
+}
+
+#vitoria {
+    font-family: monospace;
+    display: none;
+    transition: 0.25s;
+    opacity: 0;
+}
+
+#denovo {
+    display: inline-block;
+}
+
+
+
+/* Game */
+
+#conteinerRestart {
+    display: inline-block;
+    width: 100%;
+    pointer-events: none;
+}
+
+#restart {
+    display: none;
+    float: left;
+    transition: 0.5s;
+    opacity: 0%;
+    margin-top: 20px;
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#restartIcon {
+    width: 20px;
+    height: 20px;
+    fill: #808080;
+}
+
+#conteinerCartas {
+    display: none;
+    position: relative;
+}
+
+#cartas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    margin-top: auto;
+    display: none;
+    width: 98%;
+}
+
+.carta {
+    border: 1;
+    background-color: rgb(39,44,53);
+    background-position: center;
+    background-image: url(icones/interrogacao.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    display: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    transform: rotate3d(0, 1, 0, 180deg);
+    transition: transform 0.5s, opacity 0.25s;
+    cursor: pointer;
+    opacity: 0;
+}

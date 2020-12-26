@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jogo da Memória</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="icones/interrogacao2.png">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta charset="UTF-8">
+        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div id="conteudo">
+            <div id="setup" style="opacity: 100%;">
+                <h1>Jogo da Memória</h1>
+                <div id="conteinerdificuldade">
+                    <h2>Dificuldade: </h2>
+                    <select id="dificuldade">
+                        <option value="12">Fácil (12 pares)</option>
+                        <option value="18">Médio (18 pares)</option>
+                        <option value="24">Difícil (24 pares)</option>
+                    </select>
+                </div>
+                <button class= "botao" id="comecar" onclick="iniciarJogo()">Começar</button>
+            </div>
+
+            <div id="vitoria">
+                <h1>Parabéns!</h1>
+                <h2>Você venceu!</h2>
+                <div id="denovo">
+                    <h2>Deseja jogar novamente?</h2>
+                    <button onclick="restart()"class="botao">Sim</button>
+                </div>
+            </div>
+
+            <div id="conteinerRestart">
+                <div onclick="restart()" id="restart">
+                    <svg id="restartIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><g><path d="M924.9,500L990,184.6l-102.7,33.9C796.5,91.3,652.6,15.7,494.3,15.7C227.3,15.7,10,233,10,500c0,267,217.3,484.3,484.3,484.3c98.8,0,194-29.5,274.8-85.6L708,810.3c-63,43.4-136.8,66.4-213.7,66.4c-207.7,0-376.7-169-376.7-376.7c0-207.7,169-376.7,376.7-376.7c111.5,0,214,48.3,285,131.2l-94.9,31.4L924.9,500z"/></g></svg>
+                    <div>Reiniciar</div>
+                </div>
+            </div>
+
+            <div id="conteinerCartas">
+                <div id="cartas"> 
+            </div>      
+            </div>
+        </div>
+    </body>
+</html>
