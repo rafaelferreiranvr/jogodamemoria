@@ -35,6 +35,7 @@ body {
 #setup { 
     display: inherit;
     transition: 0.5s;
+    font-family: monospace;
 }
 
 #setup h1 {
